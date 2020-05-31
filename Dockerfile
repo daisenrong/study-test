@@ -1,7 +1,7 @@
 FROM centos
 WORKDIR /app
 
-RUN yum -y install java && yum -y install maven && yum -y install git \
+RUN yum -y install java && yum -y install maven && yum -y install git
 #&& yum -y install expect \
 RUN cd /app && git clone https://github.com/daisenrong/study-test.git
 
