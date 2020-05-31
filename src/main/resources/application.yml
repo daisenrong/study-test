@@ -1,0 +1,36 @@
+server:
+  tomcat:
+    accept-count: 10000
+    max-connections: 8196
+    threads:
+      max: 400
+      min-spare: 50
+  port: 8080
+spring:
+  datasource:
+    druid:
+      driverClassName: com.mysql.jdbc.Driver
+      url: jdbc:mysql://mysql-local.lazydsr.com:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull
+      username: root
+      password: root
+      initialSize: 50
+      minIdle: 5
+      maxActive: 50
+      maxWait: 60000
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: SELECT 'x'
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      poolPreparedStatements: false
+      maxPoolPreparedStatementPerConnectionSize: 20
+      filters: stat
+
+      web-stat-filter:
+        enabled: true
+      stat-view-servlet:
+        enabled: true
+mybatis:
+  type-aliases-package: com.lazydsr.study.test.entity
+  mapper-locations: classpath:mapper/*.xml
