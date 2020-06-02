@@ -10,7 +10,7 @@ spring:
   datasource:
     druid:
       driverClassName: com.mysql.jdbc.Driver
-      url: jdbc:mysql://192.168.2.100:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull
+      url: jdbc:mysql://mysql-local.lazydsr.com:3306/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&autoReconnect=true&rewriteBatchedStatements=true&zeroDateTimeBehavior=convertToNull
       username: root
       password: root
       initialSize: 50
